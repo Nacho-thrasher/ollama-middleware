@@ -1,0 +1,10 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+healthcheck_path = "/health"
+healthcheck_timeout = 60
+restarts = "on-failure"
+
+[env]
+OLLAMA_API = "http://ollama-railway.railway.internal:11434"
